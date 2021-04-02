@@ -7,13 +7,23 @@
 ## установка Vagrant & Virtualbox
 
 Установить на хостовую машину следующие пакеты:
+
 	- vagrant
 	- virtualbox
 	- virtualbox-guest-utils
 
+Добавить пользователя в группу vboxsf, vboxusers.
+
+```bash
+    $ sudo gpasswd vboxusers -a $USER
+    $ sudo gpasswd vboxsf -a $USER
+```
+
 После установки vagrant'a установить плагин vagrant-vbguest `vagrant plugin install vagrant-vbguest --plugin-version 0.29`.
 
-##Структура
+После установки virtualbox перезагрузить хостовую машину.
+
+## Структура
 
 ```
 ./
